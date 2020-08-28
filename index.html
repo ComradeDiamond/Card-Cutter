@@ -453,7 +453,7 @@
 				let date = new Date();
 				
 				let tempName = document.createElement("div");
-				tempName.innerText = `${nameJS.value} ${date.getMonth()}/${date.getDate()}`;
+				tempName.innerText = `${nameJS.value} ${date.getMonth() + 1}/${date.getDate()}`;
 				tempName.style.fontFamily = "Arial"; //We could literally abstract all this but it's the same line length
 				tempName.style.fontSize = "11pt";
 				tempName.style.fontWeight = "bold";
