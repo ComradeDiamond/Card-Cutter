@@ -480,8 +480,6 @@
 				//tempPaste.innerText = inputForm.pasteBox.value;
 				tempPaste.style.fontFamily = "Arial";
 				tempPaste.style.fontSize = "11pt";
-				tempPaste.appendChild(document.createElement("br"));
-				tempPaste.appendChild(document.createElement("br"));
 
 				//HTML DOM Mental Gymnastics because you can't trust people not to mess with SQL Injection Hacks lmao
 				var createHighlight = function(text, isHighlighted) {
@@ -510,7 +508,9 @@
 					createHighlight(pasteArray[c], tempBoolean);
 					tempBoolean = !tempBoolean;
 				}
-
+				
+				tempPaste.appendChild(document.createElement("br"));
+				tempPaste.appendChild(document.createElement("br"));
 				styleForm.descriptionPosition.value = "after";
 
 				display(tempName, tempAuthor, tempDescription, tempPaste, doIWipe);
