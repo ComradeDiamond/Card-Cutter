@@ -449,8 +449,11 @@
 			}
 			async function blockfile(doIWipe) 
 			{
+				//Date
+				let date = new Date();
+				
 				let tempName = document.createElement("div");
-				tempName.innerText = nameJS.value;
+				tempName.innerText = `${nameJS.value} ${date.getMonth()}/${date.getDate()}`;
 				tempName.style.fontFamily = "Arial"; //We could literally abstract all this but it's the same line length
 				tempName.style.fontSize = "11pt";
 				tempName.style.fontWeight = "bold";
