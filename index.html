@@ -3,9 +3,7 @@
 	<head>
 		<title>Card Cutter</title>
 		<link rel="stylesheet" href="index.css" />
-		<style>
-			
-		</style>
+		<link rel="stylesheet" href="cardHover.css" />
 
 		<script src="index.js">
 			//https://paletton.com/#uid=10M0u0ktBBaiqJMnREmAbt9ComE
@@ -37,17 +35,35 @@
 		</div>
 
 		<div id="customHTML">
-			Customizations
+			<br /> Customizations
 		</div>
+		<br />
 
 		<!-- Use Hori & Vertical Flexbox model here I think -->
 		<div id="flexOptHTML">
 			<div class="flexCard">
 				<img src="Images/cog.png" /> 
+				<div class="flexDesc">Presets</div>
+				<div class="flexVal">None</div>
+			</div>
+			<div class="flexCard">
+				<img src="Images/font.png" />
+				<div class="flexDesc">Font</div>
+				<div class="flexVal">Times New Roman</div>
+			</div>
+			<div class="flexCard">
+				<img src="Images/font.png" />
+				<div class="flexDesc">Font</div>
+				<div class="flexVal">Times New Roman</div>
 			</div>
 		</div>
 
 		<!--https://www.flaticon.com/free-icon/two-cogwheels-configuration-interface-symbol_44520#-->
+		<!--
+			Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+			Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+			Icons made by <a href="https://www.flaticon.com/authors/pixelmeetup" title="Pixelmeetup">Pixelmeetup</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+		-->
 		<!---->
 		<!--
 		<h1>Card Cutter</h1>
@@ -76,7 +92,7 @@
 				<option value="comforta light">Comforta Light</option>
 			</select> <br />
 
-			Label Highlight:
+			General Highlight:
 			<select name="labelHighlight">
 				<option value="none">None</option>
 				<option value="#f0dbaa">Manilla</option>
@@ -92,7 +108,9 @@
 
 			Label Size: <input name="labelSize" type="number" min="1" max="48" value="18"/> <br />
 
-			Author Tag Customizations: 
+			Label Highlight: 
+
+			Author Customizations: 
 			<select name="authorTagCustomization">
 				<option value="none">None</option>
 				<option value="bold">Bold</option>
@@ -100,7 +118,7 @@
 				<option value="underline">Underline</option>
 			</select> &emsp;
 
-			Tag Color:
+			Author Color:
 			<select name="authorTagColor">
 				<option value="black">Black</option>
 				<option value="#00a2ff">Blue</option>

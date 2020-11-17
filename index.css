@@ -67,12 +67,30 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	border: transparent solid;
+}
+
+.flexCard:hover
+{
+	animation-name: cardHover;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
 }
 
 .flexCard img
 {
 	width: 40%;
 	height: auto;
+}
+
+.flexDesc
+{
+	font: 18pt trebuchet ms;
+}
+
+.flexVal
+{
+	font: italic 16pt calibri;
 }
 
 #cardSlideHTML
@@ -82,4 +100,12 @@
 	background-image: url(Images/cardCutting1.png);
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+#customHTML
+{
+	padding: 3px;
+	margin-left: 10%;
+	font: 28pt trebuchet ms;
+	text-decoration-line: underline;
 }
