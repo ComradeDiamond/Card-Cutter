@@ -17,14 +17,14 @@
 			</h1>
 			<nav>
 				<img 
-					src="https://discord.com/assets/2c21aeda16de354ba5334551a883b481.png" 
-					onclick=""
-					title="Contact Justin via discord"
+					src="Images/github.png" 
+					onclick="window.open(gitJustin, '_blank');"
+					title="Justin Github and all that stuff!"
 				/>
 
 				<img 
 					src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1004px-Google_%22G%22_Logo.svg.png"
-					onclick=""
+					onclick="window.open(mailToJustin, '_blank');"
 					title="Email Justin"
 				/>
  			</nav>
@@ -41,156 +41,85 @@
 
 		<!-- Use Hori & Vertical Flexbox model here I think -->
 		<div id="flexOptHTML">
-			<div class="flexCard">
+			<div class="flexCard" onclick="mdcDisplay();">
 				<img src="Images/cog.png" /> 
 				<div class="flexDesc">Presets</div>
 				<div class="flexVal">None</div>
 			</div>
-			<div class="flexCard">
+			<div class="flexCard" onclick="mdcDisplay();">
 				<img src="Images/font.png" />
 				<div class="flexDesc">Font</div>
 				<div class="flexVal">Times New Roman</div>
 			</div>
-			<div class="flexCard">
-				<img src="Images/font.png" />
-				<div class="flexDesc">Font</div>
-				<div class="flexVal">Times New Roman</div>
+			<div class="flexCard" onclick="mdcDisplay();">
+				<img src="Images/sizeBlk.png" />
+				<div class="flexDesc">Card Size</div>
+				<div class="flexVal">12pt</div>
+			</div>
+			<div class="flexCard" onclick="mdcDisplay();">
+				<img src="Images/marker.png" />
+				<div class="flexDesc">Highlight Color</div>
+				<div class="flexVal">None</div>
+			</div>
+			<div class="flexCard" onclick="mdcDisplay();">
+				<img src="Images/userColor.png" />
+				<div class="flexDesc">Author/Link Color</div>
+				<div class="flexVal">None</div>
+			</div>
+			<div class="flexCard" onclick="mdcDisplay();">
+				<img src="Images/userCustomization.png" />
+				<div class="flexDesc">Author/Link Customization</div>
+				<div class="flexVal">None</div>
+			</div>
+			<div class="flexCard" onclick="mdcDisplay();">
+				<img src="Images/descriptionColor.png" />
+				<div class="flexDesc">Description Color</div>
+				<div class="flexVal">None</div>
+			</div>
+			<div class="flexCard" onclick="mdcDisplay();">
+				<img src="Images/descriptionPosition.png" />
+				<div class="flexDesc">Description Position</div>
+				<div class="flexVal">None</div>
+			</div>
+			<div class="flexCard" onclick="mdcDisplay();">
+				<img src="Images/tagColor.png" />
+				<div class="flexDesc">Tag Color</div>
+				<div class="flexVal">None</div>
+			</div>
+			<div class="flexCard" onclick="mdcDisplay();">
+				<img src="Images/tagPosition.png" />
+				<div class="flexDesc">Tag Align</div>
+				<div class="flexVal">None</div>
+			</div>
+			<div class="flexCard" onclick="mdcDisplay();">
+				<img src="Images/tagSize.png" />
+				<div class="flexDesc">Tag Size</div>
+				<div class="flexVal">None</div>
+			</div>
+			<div class="flexCard" onclick="mdcDisplay();">
+				<img src="Images/tagCustomization.png" />
+				<div class="flexDesc">Tag Customizations</div>
+				<div class="flexVal">None</div>
 			</div>
 		</div>
 
-		<!--https://www.flaticon.com/free-icon/two-cogwheels-configuration-interface-symbol_44520#-->
-		<!--
-			Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-			Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-			Icons made by <a href="https://www.flaticon.com/authors/pixelmeetup" title="Pixelmeetup">Pixelmeetup</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-		-->
-		<!---->
-		<!--
-		<h1>Card Cutter</h1>
-		<p>Paste your card in the box, choose your presets, and copy away!</p>
-		<hr />
-		<br />
-		<br />
-
-		<form id="styleFormHTML" class="styleFormCSS" onchange="asyncQuerySwap(this);">
-			Presets (will ignore all other customizations): 
-			<select name="presets">
-				<option value="none">None</option>
-				<option value="seal">Justin</option>
-				<option value="bulletBoard">Bullet List</option>
-				<option value="mla">MLA</option>
-				<option value="blockfile">Dumb Blockfile</option>
-			</select> &emsp;
-
-			Font Style: 
-			<select name="fontFamily">
-				<option value="Times New Roman">Times New Roman</option>
-				<option value="arial">Arial</option>
-				<option value="Comic Sans MS">Comic Sans</option>
-				<option value="garamond">Garamond</option>
-				<option value="georgia">Georgia</option>
-				<option value="comforta light">Comforta Light</option>
-			</select> <br />
-
-			General Highlight:
-			<select name="labelHighlight">
-				<option value="none">None</option>
-				<option value="#f0dbaa">Manilla</option>
-				<option value="#fff533">Yellow</option>
-				<option value="#47ff4a">Lime</option>
-				<option value="#3ee8f7">Light Blue</option>
-				<option value="#ff94f1">Pink</option>
-				<option value="#facc4d">Orange</option>
-			</select> &emsp;
-
-			I know what I'm doing: Lemme insert my own color: 
-			<input type="text" name="highlightEnter" maxlength="10" /> &emsp;
-
-			Label Size: <input name="labelSize" type="number" min="1" max="48" value="18"/> <br />
-
-			Label Highlight: 
-
-			Author Customizations: 
-			<select name="authorTagCustomization">
-				<option value="none">None</option>
-				<option value="bold">Bold</option>
-				<option value="italics">Italics</option>
-				<option value="underline">Underline</option>
-			</select> &emsp;
-
-			Author Color:
-			<select name="authorTagColor">
-				<option value="black">Black</option>
-				<option value="#00a2ff">Blue</option>
-				<option value="#05fa77">Green</option>
-			</select> &emsp;
-
-			I picked other, and I know what I'm doing:
-			<input type="text" name="authorTagEnter" maxlength="10" /> <br />
-
-			Description Position:
-			<select name="descriptionPosition">
-				<option value="before">Before</option>
-				<option value="after">After</option>
-			</select> &emsp;
-
-			Description Customizations:
-			<select name="descriptionCustomization">
-				<option value="none">None</option>
-				<option value="bold">Bold</option>
-				<option value="italics">Italics</option>
-				<option value="underline">Underline</option>
-			</select> &emsp;
-
-			Description Color:
-			<select name="descriptionTagColor">
-				<option value="black">Black</option>
-				<option value="#00a2ff">Blue</option>
-				<option value="#05fa77">Green</option>
-				<option value="#ffc505">Orange</option>
-			</select> &emsp;
-
-			Overall Size: 
-			<input type="number" name="size" min="1" max="36" value="12"/>
-		</form>
-
-		<br />
-
-		<form id="infoFormHTML" class="infoFormCSS">
-			<span id="nameSpan">Name: &nbsp;</span>
-			<input type="text" name="nameInput" id="nameHTML" placeholder="Insert your name here lmao" size="130" maxlength="130" />
-
-			<span id="cardLabelBoxSpan">Card Label: &nbsp;</span>
-			<input type="text" name="cardLabelBox" id="cardLabelBox" placeholder="Label for the Card" size="130" maxlength="130" />
-			<br />
-
-			Description: &nbsp;
-			<input type="text" name="descriptionBox" placeholder="Optional card description" size="130" maxlength="130"/>
-			<br />
-
-			Link: &nbsp;
-			<input type="text" name="link" placeholder="Link to Card" size="130"/>
-			<br />
-
-			Author Tag: &nbsp;
-			<input type="text" name="authorTag" placeholder="(Last Name of Author) '(Last Two Digits of Year) - like Glenn '20" size="130" maxlength="130"/>
-		</form>
-
-		<br />
+		<div id="customHTML">
+			<br /> Card Creator
+		</div>
 		<br />
 
 		<form id="inputFormHTML">
-			<textarea type="text" name="pasteBox" placeholder="Your paste goes here!" cols="155" rows="8" ></textarea>
+			<label>Card Tag: </label> <input name="tag" /> <br />
+			<label>Author: </label> <input name="author" /> <br />
+			<label>Link: </label> <input name="link" /> <br />
+			<label>Description: </label> <input name="desc" /> <br />
 		</form>
 
-		<button onclick="paste()">Paste</button>
-		<button onclick="generate(false)">Generate Card</button>
-		<button onclick="generate(true)">Generate and Wipe</button>
-
-		<br /><br /><br />
-
-		<div id="outputDivHTML"></div> 
-		<img src="Images/cardCutting.jpg" class="cardCutCSS" draggable="false"/>
-	-->
+		<!-- Make h1 to h6, don't clone new cards but create new cards from scratch???-->
+		<!--
+			Icons made by <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+			Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+			Icons made by <a href="https://www.flaticon.com/authors/pixelmeetup" title="Pixelmeetup">Pixelmeetup</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+		-->
 	</body>
 </html>

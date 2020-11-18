@@ -56,24 +56,28 @@
 #flexOptHTML
 {
 	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	margin-left: 5%;
 	margin-right: 5%;
 }
 
 .flexCard
 {
-	width: 30%;
+	width: 21%;
+	padding: 1%;
 	height: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	border: transparent solid;
+	cursor: pointer;
 }
 
 .flexCard:hover
 {
 	animation-name: cardHover;
-	animation-duration: 3s;
+	animation-duration: 2s;
 	animation-fill-mode: forwards;
 }
 
@@ -108,4 +112,37 @@
 	margin-left: 10%;
 	font: 28pt trebuchet ms;
 	text-decoration-line: underline;
+}
+
+#inputFormHTML
+{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+/*Justin imagine having to align input fields lmao*/
+#inputFormHTML label
+{
+	text-align: right;
+	width: 15%;
+	display: inline-block;
+	font: 14pt trebuchet ms;
+	color: #3d59a7;
+}
+
+#inputFormHTML input
+{
+	box-sizing: border-box;
+	width: 80%;
+	margin-bottom: 0.5em;
+	border: none;
+	border-bottom: 1px #b3b3b3 solid;
+	outline: none;
+	font: 14pt trebuchet ms;
+}
+
+#inputFormHTML input:focus
+{
+	/*Not the smoothest thing but eh the animation would be 1 seconds anyways*/
+	border-bottom: 2px #010236 solid;
 }

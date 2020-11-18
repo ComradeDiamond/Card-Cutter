@@ -1,3 +1,6 @@
+const mailToJustin = 'mailto:justinchen3946@gmail.com?Subject=Email%20Justin!';
+const gitJustin = 'https://github.com/ComradeDiamond';
+
 const initialize = () => {
 	//Insert display
 	displayJSON = {
