@@ -2,15 +2,18 @@
 <html>
 	<head>
 		<title>Card Cutter</title>
-		<link rel="stylesheet" href="index.css" />
-		<link rel="stylesheet" href="cardHover.css" />
+		<link rel="stylesheet" href="Stylesheets/hFt.css" />
+		<link rel="stylesheet" href="Stylesheets/index.css" />
+		<link rel="stylesheet" href="Stylesheets/cardHover.css" />
 
-		<script src="index.js">
-			//https://paletton.com/#uid=10M0u0ktBBaiqJMnREmAbt9ComE
-		</script>
+		<script src="Script/index.js"></script>
+		<script src="Script/navControl.js"></script>
 	</head>
 	<section></section>
-	<body onload="initialize();" onscroll="editNav(window, document.getElementById('topNavHTML'))();">
+	<body 
+		onload="initialize();" 
+		onscroll="editNav(window.scrollY, document.getElementById('topNavHTML'))();"
+	>
 		<header id="topNavHTML">
 			<h1>
 				CARD CUTTER
@@ -109,17 +112,62 @@
 		<br />
 
 		<form id="inputFormHTML">
-			<label>Card Tag: </label> <input name="tag" /> <br />
-			<label>Author: </label> <input name="author" /> <br />
-			<label>Link: </label> <input name="link" /> <br />
-			<label>Description: </label> <input name="desc" /> <br />
+			<label>Card Tag <span class="icon" 
+				title="This is your description of the card">&#9432;</span> </label> <input name="tag" 
+				placeholder="DL/DR/LT/IT/Turn/IM/DA..."/> <br />
+			<label>Author <span class="icon" 
+				title="Author's last name and last two digits of the year">&#9432;</span> </label> <input name="author" 
+				placeholder="Glenn '20'"/> <br />
+			<label>Link <span class="icon" 
+				title="Link to the card. Fair enough.">&#9432;</span class="icon"> </label> <input name="link" 
+				placeholder="https://"/> <br />
+			<label>Description <span class="icon" 
+				title="An optional description so you can explain the card more">&#9432;</span> </label> <input name="desc" 
+				placeholder="Insert Description"/> <br /> 
+			
+			<div id="optDiv">
+				<img 
+					src="Images/paste.png"
+					title="Paste Card"
+					onclick=""
+				/> <br />
+				<img 
+					src="Images/scissors.png"
+					title="Generate Cut Card"
+					onclick=""
+				/> <br />
+				<img 
+					src="Images/delete.png"
+					title="Delete Inputs"
+					onclick=""
+				/> <br />
+			</div>
+
+			<textarea 
+				name="content" 
+				placeholder="Insert your card! Sandwich anything that needs to highlighted in \"
+			></textarea>
 		</form>
 
-		<!-- Make h1 to h6, don't clone new cards but create new cards from scratch???-->
-		<!--
-			Icons made by <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-			Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-			Icons made by <a href="https://www.flaticon.com/authors/pixelmeetup" title="Pixelmeetup">Pixelmeetup</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-		-->
+		<div id="cardHTML">
+			Your card goes here
+		</div> 
+		
+		<br />
+
+		<div id="tempWrapHTML">
+			<footer id="credits">
+				Legal Stuff (IDK I'm not a LAS Coffee Kid) <br />
+				<span onclick="window.open('terms.html', '_blank')">
+					Terms and Conditions
+				</span>
+				<span onclick="window.open('license.html', '_blank')">
+					License
+				</span>
+				<span onclick="window.open('credits.html', '_blank')";>
+					Credits
+				</span>
+			</footer>
+		</div>
 	</body>
 </html>
