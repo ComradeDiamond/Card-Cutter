@@ -139,3 +139,61 @@
 	height: auto;
 	padding: 1em;
 }
+
+#invisFormHTML
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 5;
+	visibility: hidden;
+}
+
+#invisFormHTML > div
+{
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	height: auto;
+	width: 40%;
+	background-color: white;
+	border: 2px lightgray solid;
+	border-radius: 5%;
+	box-shadow: 8px 5px 10px;
+
+	/*Preparing for the css anim.*/
+	display: none;
+	opacity: 0;
+
+	font: 16pt trebuchet ms;
+}
+
+.modalTitleDiv, .modalSpan
+{
+	margin-left: 10%;
+	margin-top: 10%;
+	margin-bottom: 5%;
+}
+
+.modalTitleDiv
+{
+	font: 24pt trebuchet ms;
+}
+
+.modalSelect
+{
+	font: 15pt trebuchet ms;
+}
+
+.leaveCSS
+{
+	width: 20%;
+	margin-bottom: 10%;
+	height: auto;
+	cursor: pointer;
+	
+	position: relative;
+	left: 70%; /*70 + 20 = 90*/
+}

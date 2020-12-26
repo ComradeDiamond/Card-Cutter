@@ -5,13 +5,15 @@
 		<link rel="stylesheet" href="Stylesheets/hFt.css" />
 		<link rel="stylesheet" href="Stylesheets/index.css" />
 		<link rel="stylesheet" href="Stylesheets/cardHover.css" />
+		<link rel="stylesheet" href="Stylesheets/zoomIn.css" />
+		<link rel="stylesheet" href="Stylesheets/fadeBlack.css" />
 
 		<script src="Script/index.js"></script>
 		<script src="Script/navControl.js"></script>
 	</head>
 	<section></section>
 	<body 
-		onload="initialize();" 
+		onload="initialize(document);" 
 		onscroll="editNav(window.scrollY, document.getElementById('topNavHTML'))();"
 	>
 		<header id="topNavHTML">
@@ -44,65 +46,65 @@
 
 		<!-- Use Hori & Vertical Flexbox model here I think -->
 		<div id="flexOptHTML">
-			<div class="flexCard" onclick="mdcDisplay();">
+			<div class="flexCard">
 				<img src="Images/cog.png" /> 
 				<div class="flexDesc">Presets</div>
-				<div class="flexVal">None</div>
+				<div class="flexVal"></div>
 			</div>
-			<div class="flexCard" onclick="mdcDisplay();">
+			<div class="flexCard">
 				<img src="Images/font.png" />
 				<div class="flexDesc">Font</div>
-				<div class="flexVal">Times New Roman</div>
+				<div class="flexVal"></div>
 			</div>
-			<div class="flexCard" onclick="mdcDisplay();">
+			<div class="flexCard">
 				<img src="Images/sizeBlk.png" />
 				<div class="flexDesc">Card Size</div>
-				<div class="flexVal">12pt</div>
+				<div class="flexVal"></div>
 			</div>
-			<div class="flexCard" onclick="mdcDisplay();">
+			<div class="flexCard">
 				<img src="Images/marker.png" />
 				<div class="flexDesc">Highlight Color</div>
-				<div class="flexVal">None</div>
+				<div class="flexVal"></div>
 			</div>
-			<div class="flexCard" onclick="mdcDisplay();">
+			<div class="flexCard">
 				<img src="Images/userColor.png" />
 				<div class="flexDesc">Author/Link Color</div>
-				<div class="flexVal">None</div>
+				<div class="flexVal"></div>
 			</div>
-			<div class="flexCard" onclick="mdcDisplay();">
+			<div class="flexCard">
 				<img src="Images/userCustomization.png" />
 				<div class="flexDesc">Author/Link Customization</div>
-				<div class="flexVal">None</div>
+				<div class="flexVal"></div>
 			</div>
-			<div class="flexCard" onclick="mdcDisplay();">
+			<div class="flexCard">
 				<img src="Images/descriptionColor.png" />
 				<div class="flexDesc">Description Color</div>
-				<div class="flexVal">None</div>
+				<div class="flexVal"></div>
 			</div>
-			<div class="flexCard" onclick="mdcDisplay();">
+			<div class="flexCard">
 				<img src="Images/descriptionPosition.png" />
 				<div class="flexDesc">Description Position</div>
-				<div class="flexVal">None</div>
+				<div class="flexVal"></div>
 			</div>
-			<div class="flexCard" onclick="mdcDisplay();">
+			<div class="flexCard">
 				<img src="Images/tagColor.png" />
 				<div class="flexDesc">Tag Color</div>
-				<div class="flexVal">None</div>
+				<div class="flexVal"></div>
 			</div>
-			<div class="flexCard" onclick="mdcDisplay();">
+			<div class="flexCard">
 				<img src="Images/tagPosition.png" />
 				<div class="flexDesc">Tag Align</div>
-				<div class="flexVal">None</div>
+				<div class="flexVal"></div>
 			</div>
-			<div class="flexCard" onclick="mdcDisplay();">
+			<div class="flexCard">
 				<img src="Images/tagSize.png" />
 				<div class="flexDesc">Tag Size</div>
-				<div class="flexVal">None</div>
+				<div class="flexVal"></div>
 			</div>
-			<div class="flexCard" onclick="mdcDisplay();">
+			<div class="flexCard">
 				<img src="Images/tagCustomization.png" />
 				<div class="flexDesc">Tag Customizations</div>
-				<div class="flexVal">None</div>
+				<div class="flexVal"></div>
 			</div>
 		</div>
 
@@ -155,15 +157,27 @@
 		
 		<br />
 
+		<!--Invisible MDC Input Display divs-->
+		<form id="invisFormHTML">
+			<div eAdded="false">
+				<div class="modalTitleDiv"><b>Select a Preset</b></div>
+
+				<span class="modalSpan">Presets: </span>
+				<select class="modalSelect">
+					<option value="None">None</option>
+					<option value="Justin">Justin</option>
+				</select> <br />
+
+				<image 
+					src="Images/save.png" 
+					class="leaveCSS" 
+				/>
+			</div>
+		</form>
+
 		<div id="tempWrapHTML">
 			<footer id="credits">
 				Legal Stuff (IDK I'm not a LAS Coffee Kid) <br />
-				<span onclick="window.open('terms.html', '_blank')">
-					Terms and Conditions
-				</span>
-				<span onclick="window.open('license.html', '_blank')">
-					License
-				</span>
 				<span onclick="window.open('credits.html', '_blank')";>
 					Credits
 				</span>
