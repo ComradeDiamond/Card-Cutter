@@ -119,12 +119,13 @@ const genCard = (inputForm, customizations) => {
 	tag.style.textAlign = customizations.tagAlign;
 	applyCustomization(tag, customizations.tagCustomization);
 
-	let link = document.createElement("div");
+	let link = document.createElement("a");
 	link.innerText = inputForm.author.value;
 	link.addEventListener("click", () => {
 		window.open(inputForm.link.value, "_blank");
 	});
 	link.style.color = customizations.linkColor;
+	link.style.display = "block";
 	applyCustomization(link, customizations.linkCustom);
 
 	let text = document.createElement("div");
