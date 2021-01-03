@@ -131,7 +131,8 @@ const genCard = (inputForm, customizations) => {
 	//Offtrack - calculating the text and highlights
 	//Since we split the items via \, only array idxes to the right of \ will need to be highlighted
 	//Hence, only odd idxes need to get hlEl before adding to the cumulation variable
-	var hlEl = `<mark style="background-color: ${customizations.highlightColor};">`;
+
+	var hlEl = `<mark style="background-color: ${customizations.highlightColor}; font-weight: bold; text-decoration:underline;">`;
 	var txt = inputForm.content.value.split("\\").reduce((cum, str, idx) =>
 		cum + (idx % 2 == 0 ? str : hlEl + str + `</mark>`)
 		, "");
@@ -178,7 +179,6 @@ const applyCustomization = (element, customizations) => {
 const displayCard = (inputForm, cardItem, customizations) => {
 	fetchPreset(customizations)
 		.then(json => {
-			console.log("I resolved!")
 			let dom = genCard(inputForm, json);
 
 			cardItem.innerHTML = "";
