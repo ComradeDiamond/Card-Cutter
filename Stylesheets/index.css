@@ -170,6 +170,11 @@
 	font: 16pt trebuchet ms;
 }
 
+#invisFormHTML > div input
+{
+	width: 15%;
+}
+
 .modalTitleDiv, .modalSpan
 {
 	margin-left: 10%;
@@ -177,12 +182,18 @@
 	margin-bottom: 5%;
 }
 
+.modalSpan1
+{
+	margin-top: 2%;
+	margin-left: 10%;
+}
+
 .modalTitleDiv
 {
 	font: 24pt trebuchet ms;
 }
 
-.modalSelect
+.modalSelect, .addItem, .px
 {
 	font: 15pt trebuchet ms;
 }
