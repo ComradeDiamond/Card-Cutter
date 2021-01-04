@@ -220,3 +220,21 @@ function fetchPreset(customizations)
 			})
 	});
 }
+
+function deleteInput(inputForm)
+{
+	//Not the most D.R.Y but hey it's the fastest
+	inputForm.tag.value = "";
+	inputForm.author.value = "";
+	inputForm.link.value = "";
+	inputForm.desc.value = "";
+	inputForm.content.value = "";
+}
+
+function pasteCard(clipboard, contentDiv)
+{
+	clipboard.readText()
+		.then(txt => {
+			contentDiv.value = txt;
+		})
+}

@@ -136,7 +136,7 @@
 				<img 
 					src="Images/paste.png"
 					title="Paste Card"
-					onclick=""
+					onclick="pasteCard(Navigator.clipboard, document.getElementById('inputFormHTML').content);"
 				/> <br />
 				<img 
 					src="Images/scissors.png"
@@ -146,7 +146,7 @@
 				<img 
 					src="Images/delete.png"
 					title="Delete Inputs"
-					onclick=""
+					onclick="deleteInput(document.getElementById('inputFormHTML'));"
 				/> <br />
 			</div>
 
